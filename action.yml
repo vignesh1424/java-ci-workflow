@@ -27,4 +27,3 @@ runs:
         with:
           name: jacoco-report
           path: target/site/jacoco/
-        shell: bash
