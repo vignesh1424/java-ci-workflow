@@ -22,3 +22,8 @@ runs:
                 echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
                 echo "branch coverage = ${{ steps.jacoco.outputs.branches }}"
         shell: bash
+      - name: Upload JaCoCo coverage report
+        uses: actions/upload-artifact@v2
+        with:
+        name: jacoco-report
+        path: target/site/jacoco/
