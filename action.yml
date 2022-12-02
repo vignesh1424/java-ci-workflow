@@ -14,6 +14,8 @@ runs:
       - name: Build with Gradle
         run: ./gradlew build
         shell: bash
+      - name: Run Test Coverage
+        run: ./gradlew jacocoTestReport
       - name: Generate JaCoCo Badge
         id: jacoco
         uses: cicirello/jacoco-badge-generator@v2
